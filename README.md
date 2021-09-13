@@ -13,7 +13,7 @@ Here is an overview diagram:
 <hr>
 How to run the project:
 
-1. Install Docker  both Microsoft Windows Server 2019 and Ubuntu 16.04
+1. Install Docker on both Microsoft Windows Server 2019 and Ubuntu 16.04
 1. Create a Docker swarm on Windows from command prompt or PowerShell: docker swarm init --advertise-addr=\<IPADDRESS> --listen-addr \<IPADDRESS>:2377
 1. Join the existing Docker swarm on Ubuntu with the following: docker swarm join --token <WORKERJOINTOKEN> \<MANAGERIPADDRESS>
 1. Add labels to each node: docker node update --label-add \<LABELNAME>=\<LABELVALUE> \<NODENAME>
