@@ -14,9 +14,9 @@ Here is an overview diagram:
 How to run the project:
 
 1. Install Docker on both Microsoft Windows Server 2019 and Ubuntu 16.04
-1. Create a Docker swarm on Windows from command prompt or PowerShell: docker swarm init --advertise-addr=\<IPADDRESS> --listen-addr \<IPADDRESS>:2377
-1. Join the existing Docker swarm on Ubuntu with the following: docker swarm join --token <WORKERJOINTOKEN> \<MANAGERIPADDRESS>
+1. Create a Docker swarm on Windows from the Command Prompt or PowerShell: docker swarm init --advertise-addr=\<IPADDRESS> --listen-addr \<IPADDRESS>:2377
+1. Join the existing Docker swarm from Ubuntu with the following: docker swarm join --token <WORKERJOINTOKEN> \<MANAGERIPADDRESS>
 1. Add labels to each node: docker node update --label-add \<LABELNAME>=\<LABELVALUE> \<NODENAME>
-	1. Windows would be: docker node update --label-add os=windows \<NODENAME>
-	1. Ubuntu would be: docker node update --label-add os=linux \<NODENAME>
+	1. For Windows would be: docker node update --label-add os=windows \<NODENAME>
+	1. For Ubuntu would be: docker node update --label-add os=linux \<NODENAME>
 1. Deploy the stack with the following on the master node: docker stack deploy --compose-file \<FILENAME>.yml \<STACKNAME>
