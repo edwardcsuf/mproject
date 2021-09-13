@@ -1,0 +1,6 @@
+{
+    "user": "",
+    "password": "",
+    "host": "redisdb",
+    "port": 6379
+}

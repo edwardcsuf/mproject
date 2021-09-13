@@ -1,0 +1,43 @@
+<!--https://github.com/Scalegrid/code-samples/tree/sg-redis-node-socket-chat/redis-node-socket-chat-->
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Master Project</title>
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+	  <link rel="stylesheet" href="css/main.css">
+	  
+	</head>
+	<body>
+		<div class="container">
+			<h1>Master Project</h1>
+			<h4>Node.js + Socket.io + Redis Chat | ScaleGrid</h4>
+			<div class="join-chat input-group mb-3">
+				<div class="input-group-prepend">
+					<label class="input-group-text" for="username">Username:</label>
+				</div>
+				<input type="text" class="form-control" id="username" name="username" placeholder="Enter a username to continue" aria-describedby="join-chat"/>
+				<div class="input-group-append">
+					<input type="button" class="btn btn-primary" id="join-chat" value="Join Chat" />
+				</div>
+			</div>
+			<div class="chat-info"></div>
+			<div class="chat">
+			<br />
+				<div class="messages form-control"></div>
+				<div class="input-group mb-3">				
+					<input type="text" class="form-control" name="message" id="message" placeholder="Enter your message..." aria-describedby="send-message">
+					 <div class="input-group-append">					  
+						<input type="button" class="btn btn-primary" id="send-message" data-username="" value="Send Message" />
+					</div>
+				</div>
+				<input type="button" class="btn btn-secondary" id="leave-chat" data-username="" value="Leave Chat"/>
+			</div>
+			<br />
+			<p>Adapted from: https://github.com/Scalegrid/code-samples/tree/sg-redis-node-socket-chat/redis-node-socket-chat</p>
+		</div>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

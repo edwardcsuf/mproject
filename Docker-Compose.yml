@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+ redisdb:
+  image: redis:5-alpine
+  networks:
+   - backend
+  deploy:
+   placement:
+    constraints:
+     - node.labels.os == linux
+ front:
+  image: edwardcsuf/mproject
+  ports:
+   - '8080:8080'
+  networks:
+   - backend
+  deploy:
+   placement:
+    constraints:
+     - node.labels.os == windows
+
+networks:
+ backend: 
